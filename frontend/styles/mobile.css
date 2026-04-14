@@ -1,0 +1,29 @@
+.contact-card {
+  border: 1px solid #e8e8e8;
+  border-radius: 12px;
+  padding: 12px;
+  margin-bottom: 10px;
+  background: #ffffff;
+}
+
+@media (max-width: 768px) {
+  .stColumn {
+    width: 100% !important;
+    flex: 1 1 100% !important;
+  }
+
+  .stButton button,
+  .stDownloadButton button {
+    width: 100% !important;
+  }
+
+  .main .block-container {
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+    padding-top: 0.5rem;
+  }
+
+  h1, h2, h3 {
+    font-size: 1.1rem !important;
+  }
+}
