@@ -1,5 +1,10 @@
 import os
+import sys
+from pathlib import Path
 from datetime import date
+
+# Add parent directory to path for imports
+sys.path.insert(0, str(Path(__file__).parent.parent.parent))
 
 import pandas as pd
 import requests
