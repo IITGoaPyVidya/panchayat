@@ -3,6 +3,8 @@ import os
 import requests
 import streamlit as st
 
+# In production (Railway), backend runs on same host on port 8000
+# In local dev, it runs on localhost:8000
 API_BASE = os.getenv("API_BASE_URL", "http://localhost:8000")
 
 st.set_page_config(page_title="Society Management", page_icon="🏠", layout="wide")
