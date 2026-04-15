@@ -58,8 +58,21 @@ For production, use PostgreSQL instead of SQLite:
 
 Once deployed:
 - Visit the Railway-provided URL
-- Sign up as admin
-- Start using your Society Management System!
+- Login with default credentials:
+  - **Username:** `admin` (or email: `admin@admin.com`)
+  - **Password:** `admin`
+- Change the admin password for security!
+- Create additional users as needed
+
+### Default Admin Account
+
+A default admin account is automatically created on first startup:
+- Username: `admin` (or email: `admin@admin.com`)
+- Password: `admin`
+
+You can login with just **`admin`** / **`admin`** for quick access!
+
+**Security Note:** Change these credentials immediately after first login in production!
 
 ### Monitoring
 

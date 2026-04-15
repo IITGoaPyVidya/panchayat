@@ -53,7 +53,7 @@ API_BASE_URL=http://localhost:8000
 
 ```bash
 python -m venv .venv
-source .venv/bin/activate
+.\.venv\Scripts\activate
 pip install -r requirements.txt
 ```
 
@@ -68,6 +68,17 @@ uvicorn backend.main:app --reload --port 8000
 ```bash
 streamlit run frontend/app.py --server.port 8501
 ```
+
+## Default Admin Credentials
+
+For hassle-free login, a default admin account is automatically created:
+
+- **Username:** `admin` (or email: `admin@admin.com`)
+- **Password:** `admin`
+
+Just type **`admin`** / **`admin`** to login instantly!
+
+**Important:** Change these credentials in production for security!
 
 ## Notes
 

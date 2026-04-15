@@ -28,8 +28,9 @@ if "token" not in st.session_state:
     tab_login, tab_signup, tab_guest = st.tabs(["Login", "Signup", "Guest: Emergency Contacts"])
 
     with tab_login:
+        st.info("💡 **Quick Login:** Username: `admin` | Password: `admin`")
         with st.form("login_form"):
-            email = st.text_input("Email")
+            email = st.text_input("Email or Username")
             password = st.text_input("Password", type="password")
             submitted = st.form_submit_button("Login", use_container_width=True)
             if submitted:

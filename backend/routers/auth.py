@@ -37,9 +37,14 @@ def signup(payload: UserSignup, db: Session = Depends(get_db)):
 
 @router.post("/login", response_model=Token)
 def login(payload: UserLogin, db: Session = Depends(get_db)):
-    user = db.query(User).filter(User.email == payload.email).first()
+    # Allow "admin" as shorthand for admin@admin.com
+    email_to_check = payload.email
+    if payload.email.lower() == "admin":
+        email_to_check = "admin@admin.com"
+    
+    user = db.query(User).filter(User.email == email_to_check).first()
     if not user:
-        print(f"DEBUG: No user found with email {payload.email}")
+        print(f"DEBUG: No user found with email {email_to_check}")
         raise HTTPException(status_code=401, detail="Invalid credentials")
     
     print(f"DEBUG: User found: {user.email}")
